@@ -9,4 +9,5 @@ import { HighlightDirective } from './highlight';
 })
 export class App {
   protected readonly title = signal('myapp');
+  color = '';
 }
