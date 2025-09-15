@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
 import { HighlightDirective } from './highlight';
 
 @Component({
@@ -7,7 +7,4 @@ import { HighlightDirective } from './highlight';
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
-export class App {
-  protected readonly title = signal('myapp');
-  color = '';
-}
+export class App {}
