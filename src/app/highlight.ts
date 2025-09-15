@@ -6,9 +6,10 @@ import {Directive, ElementRef, HostListener, inject, input} from '@angular/core'
 export class HighlightDirective {
   private el = inject(ElementRef);
   appHighlight = input('');
+  defaultColor = input('');
 
   @HostListener('mouseenter') onMouseEnter() {
-    this.highlight(this.appHighlight() || 'red');
+    this.highlight(this.appHighlight() || this.defaultColor() || 'red');
   }
 
   @HostListener('mouseleave') onMouseLeave() {
